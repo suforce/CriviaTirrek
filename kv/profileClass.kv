@@ -1,0 +1,82 @@
+<profileClass>:
+    name:"profile"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .5
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            Label:
+                text:"User Name"
+            TextInput:
+                id:username
+                size_hint_y:.75
+                margin:100, 100, 100, 100
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"E-Mail"
+            TextInput:
+                id:email
+                hint_text:"Email"
+                size_hint_y:.75
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Name & Surname"
+            TextInput:
+                id:name
+                focus:
+                size_hint_y:.75
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Date Of Birth"
+            TextInput:
+                id:birthdate
+                multiline:False
+                size_hint_y:.75
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Homeland"
+            TextInput:
+                id:homeland
+                size_hint_y:.75
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Health"
+            TextInput:
+                id:health
+                size_hint_y:.75
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Diamond"
+            TextInput:
+                id:diamond
+                multiline:False
+                size_hint_y:.75
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Money"
+            TextInput:
+                id:money
+                multiline:False
+                size_hint_y:.75
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Button:
+                text:"Edit Information"
+                on_press:app.root.current="edit"

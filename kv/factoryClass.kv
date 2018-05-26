@@ -1,0 +1,56 @@
+<factoryClass>:
+    name:"factory"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .15
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            orientation:"vertical"
+            Label:
+                text:"Choose Your Category"
+                pos:200,200
+            BoxLayout:
+                pos:250,250
+                Button:
+                    text:"History"
+                    on_press:root.select("History")
+                    id:History
+                    on_release:root.click=1
+                Button:
+                    text:"Geography"
+                    on_press:root.select("Geography")
+                    id:Geography
+                    on_release:root.click=1
+                Button:
+                    text:"Art"
+                    on_press:root.select("Art")
+                    id:Art
+                    on_release:root.click=1
+            BoxLayout:
+                Button:
+                    text:"Sport"
+                    on_press:root.select("Sport")
+                    id:Sport
+                    on_release:root.click=1
+                Button:
+                    text:"Entertainmet"
+                    id:Entertainment
+                    on_press:root.select("Entertainment")
+                    on_release:root.click=1
+                Button:
+                    id:Science
+                    on_press:root.select("Science")
+                    on_release:root.click=1
+                    text:"Science"
+        Button:
+            text:"Continue"
+            disabled:True
+            background_color:1, 0, 0, 1
+            size_hint_y:.15
+            id:continue
+            on_press:root.goon()

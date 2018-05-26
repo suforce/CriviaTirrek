@@ -1,0 +1,31 @@
+<giftClass>:
+    name:"gift"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .15
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            size_hint:1, .15
+            Label:
+                text:"Click following button, if you want win a gift"
+                id:message
+                pos:200, 200
+        BoxLayout:
+            orientation:"vertical"
+            Button:
+                id:money
+                text:"Click Me !"
+                on_press:root.winGift("money")
+            Button:
+                id:health
+                text:"Click Me !"
+                on_press:root.winGift("health")
+            Button:
+                id:diamond
+                text:"Click Me !"
+                on_press:root.winGift("diamond")

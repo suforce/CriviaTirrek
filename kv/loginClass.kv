@@ -1,0 +1,37 @@
+<loginClass>:
+    name: "login"
+    BoxLayout:
+        size_hint:.7, .2
+        pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            orientation:"vertical"
+            BoxLayout:
+                Label:
+                    text:"User Name"
+                TextInput:
+                    id:username
+                    focus:True
+                    text:"asdasd"
+                    multiline:False
+                    pos_hint:{"center_x":.5, "center_y":.5}
+            BoxLayout:
+                Label:
+                    text:"Password"
+                TextInput:
+                    multiline:False
+                    password:True
+                    id:password
+                    text:"asdasd"
+                    placeholder:"asdasd"
+                    pos_hint:{"center_x":.5, "center_y":.5}
+            BoxLayout:
+                Button:
+                    text:"Sign In"
+                    on_press:root.signin()
+                Button:
+                    text:"Sign Up"
+                    on_press: app.root.current = 'signup'
+            BoxLayout:
+                Label:
+                    id:sonuc
+                    color:0, 0, 0, 1

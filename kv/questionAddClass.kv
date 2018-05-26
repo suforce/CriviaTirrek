@@ -1,0 +1,36 @@
+<questionAddClass>:
+    name:"questionAdd"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .05
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            orientation:"vertical"
+            TextInput:
+                id:question
+                text:"Write Your Question"
+            TextInput:
+                id:true
+                text:"Right Answer"
+            TextInput:
+                id:wrong1
+                text:"Wrong Answer 1"
+                halign: 'center'
+                valign: 'bottom'
+            TextInput:
+                id:wrong2
+                text:"Wrong Answer 2"
+            TextInput:
+                id:wrong3
+                text:"Wrong Answer 3"
+            BoxLayout:
+                size_hint_y:.5
+                Button:
+                    text:"SEND"
+                    background_color:1, .2, .2, 1
+                    on_press:root.cont()

@@ -1,0 +1,43 @@
+<newGameClass>:
+    name:"newgame"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .15
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            orientation:"vertical"
+            size_hint:1, .5
+            Label:
+                text:"Game Mode"
+            BoxLayout:
+                orientation:"vertical"
+                BoxLayout:
+                    Button:
+                        id:classic
+                        text:"Classic"
+                        on_press:root.secim("1")
+                    Button:
+                        id:challenge
+                        text:"Challenge"
+                        on_press:root.secim("2")
+                Label:
+                    id:explanation
+
+            Label:
+                text:"Opponent"
+            BoxLayout:
+                size_hint_y:.6
+                Button:
+                    text:"Random"
+                    id:random
+                    on_press:root.secim("3")
+        BoxLayout:
+            size_hint_y:.06
+            Button:
+                text:"START GAME"
+                on_press:root.startGame("1")

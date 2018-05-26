@@ -1,0 +1,76 @@
+<mainClass>:
+    name:"main"
+    TabbedPanel:
+        do_default_tab:False
+        TabbedPanelItem:
+            text:"HOME"
+            on_press:root.degistir("1")
+            BoxLayout:
+                orientation:"vertical"
+                BoxLayout:
+                    size_hint_y:.05
+                    Button:
+                        id:health
+                    Button:
+                        id:diamond
+                    Button:
+                        id:money
+                BoxLayout:
+                    orientation:"vertical"
+                    Button:
+                        text:"NEW GAME"
+                        on_press:app.root.current='newgame'
+                    Button:
+                        text:"WAR OF TIRREK"
+                        on_press: app.root.current = 'waroftirrek'
+                    Button:
+                        text:"TIRREKATION"
+                        on_press:app.root.current="tirrekation"
+        TabbedPanelItem:
+            id:message
+            text:"MESSAGES"
+            on_press:root.degistir("2")
+            Label:
+                text:"Coming Soon"
+        TabbedPanelItem:
+            text:"STORE"
+            on_press:root.degistir("3")
+            Label:
+                text:"Coming Soon"
+        TabbedPanelItem:
+            text:"RANK"
+            on_press:root.degistir("4")
+            Label:
+                text:"Coming Soon"
+        TabbedPanelItem:
+            text:"PROFILE"
+            on_press:root.degistir("5")
+            BoxLayout:
+                orientation:"vertical"
+                Button:
+                    text:"News"
+                    on_press:root.news()
+                Button:
+                    text:"Account Info"
+                    on_press:app.root.current="profile"
+                Button:
+                    text:"Friends"
+                    on_press:root.alert("Friend")
+                Button:
+                    text:"Question Factory"
+                    on_press:app.root.current="factory"
+                Button:
+                    text:"Add Coupon"
+                    on_press:root.alert("Coupon")
+                Button:
+                    text:"Gifs"
+                    on_press:app.root.current="gift"
+                Button:
+                    text:"Settings"
+                    on_press:root.alert("Settings")
+                Button:
+                    text:"About Us"
+                    on_press:app.root.current="aboutus"
+                Button:
+                    text:"Log Out"
+                    on_press:app.root.current="login"

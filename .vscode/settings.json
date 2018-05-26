@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "C:\\Users\\SUForce\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./classes",
+        "-p",
+        "*test.py"
+    ],
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.promptToConfigure": false,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false
+}

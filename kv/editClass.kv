@@ -1,0 +1,78 @@
+<editClass>:
+    name:"edit"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint:1, .25
+            Button:
+                text:"Go Back"
+                background_color:1, 1, 0, .8
+                on_press: app.root.current = "main"
+                pos:100,100
+        BoxLayout:
+            Label:
+                text:"User Name"
+            TextInput:
+                id:username
+                size_hint_y:.75
+                margin:100, 100, 100, 100
+                multiline:False
+                hint_text:"Username"
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Password"
+            TextInput:
+                id:password
+                size_hint_y:.75
+                margin:100, 100, 100, 100
+                multiline:False
+                hint_text:"Password"
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"E-Mail"
+            TextInput:
+                id:email
+                hint_text:"Email"
+                size_hint_y:.75
+                multiline:False
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Name & Surname"
+            TextInput:
+                id:name
+                focus:
+                size_hint_y:.75
+                multiline:False
+                hint_text:"Name And Surname"
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                text:"Date Of Birth"
+            BoxLayout:
+                size_hint_y:.05
+                Spinner:
+                    text:"Day"
+                    values:("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31")
+                Spinner:
+                    text:"Month"
+                Spinner:
+                    text:"Year"
+        BoxLayout:
+            Label:
+                text:"Homeland"
+            TextInput:
+                id:homeland
+                size_hint_y:.75
+                multiline:False
+                hint_text:"Homeland"
+                pos_hint:{"center_x":.5, "center_y":.5}
+        BoxLayout:
+            Label:
+                id:confirm
+        BoxLayout:
+            Button:
+                text:"Confirm"
+                on_press:root.confirm()

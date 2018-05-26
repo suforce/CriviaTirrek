@@ -1,0 +1,44 @@
+<signupClass>:
+    name: "signup"
+    BoxLayout:
+        size_hint:1, .3
+        pos_hint:{"center_x":.5, "center_y":.5}
+        orientation:"vertical"
+        BoxLayout:
+            Label:
+                text:"User Name"
+            TextInput:
+                id:username
+                multiline:False
+                focus:True
+        BoxLayout:
+            Label:
+                text:"E-Mail"
+            TextInput:
+                id:email
+                multiline:False
+        BoxLayout:
+            Label:
+                text:"Password"
+            TextInput:
+                id:password
+                multiline:False
+                password:True
+        BoxLayout:
+            Label:
+                text:"Repeat Password"
+            TextInput:
+                id:repass
+                multiline:False
+                password:True
+        BoxLayout:
+            Button:
+                text:"Sign Up"
+                on_press:root.signup()
+            Button:
+                text:"Log In"
+                on_press:app.root.current='login'
+        BoxLayout:
+            Label:
+                id:hata
+                color:0, 0, 0, 1
